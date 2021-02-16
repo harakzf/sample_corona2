@@ -1,0 +1,96 @@
+<div class="grid-x grid-padding-x">
+  <div class="cell small-2"></div>
+    <table class="table-class cell small-8">
+      <colgroup>
+        <col width="25%" /><col />
+      </colgroup>
+      <tr>
+        <th>時間</th>
+        <td><input type="time" id="start_time" name="start_time"></td>
+        <td style="text-align: center;">―</td>
+        <td><input type="time" id="end_time" name="end_time"></td>
+      </tr>
+      <tr>
+        <th>件名</th>
+        <td colspan="3"><input type="text" id="subject" name="subject"></td>
+      </tr>
+      <tr>
+        <th>オンサイト同席者</th>
+        <td colspan="3"><input type="text" id="together" name="together"></td>
+      </tr>
+      <tr>
+        <th>場所</th>
+        <td colspan="3"><input type="text" id="place" name="place"></td>
+      </tr>
+      <tr>
+        <th>自身の発話頻度</th>
+        <td colspan="3">
+          <select id="no1" name="no1" data-tooltip tabindex="" data-allow-html="true" data-position="top" data-alignment="center" title="リストから選択して下さい。">
+            <option value="">--Select--</option>
+            <option value="小">小</option>
+            <option value="中">中</option>
+            <option value="大">大</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>マスク着用</th>
+        <td colspan="3">
+          <select id="no2" name="no2" data-tooltip tabindex="" data-allow-html="true" data-position="top" data-alignment="center" title="リストから選択して下さい。">
+            <option value="">--Select--</option>
+            <option value="有">有</option>
+            <option value="無">無</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>他者との距離</th>
+        <td colspan="3"><input type="text" id="distance" name="distance"></td>
+      </tr>
+      <tr>
+        <th>アクリル板有無</th>
+        <td colspan="3">
+          <select id="no3" name="no3" data-tooltip tabindex="" data-allow-html="true" data-position="top" data-alignment="center" title="リストから選択して下さい。">
+            <option value="">--Select--</option>
+            <option value="有">有</option>
+            <option value="無">無</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  <div class="cell small-1">
+    <button type="button" onclick="addTableRow();" class="btn btn-outline-secondary" name="aaa" value="aaa">追加</button>
+  </div>
+  <div class="cell small-1"></div>
+</div>
+
+<div class="grid-x grid-padding-x">
+  <table class="table table-striped cell small-12" id="target">
+    <thead>
+      <tr>
+          <th scope="row">選択</th>
+          <th>時間</th>
+          <th>件名</th>
+          <th>オンサイト</br>同席者</th>
+          <th>場所</th>
+          <th>自身の</br>発話頻度</th>
+          <th>マスク着用</th>
+          <th>他者との距離</th>
+          <th>アクリル板</br>有無</th>
+        </tr>
+    </thead>
+    <tbody id="params">
+      <!-- ここにレコードが追加されていく -->
+    </tbody>
+  </table>
+</div>
+
+<div class="grid-x grid-padding-x">
+  <button type="button" class="btn btn-outline-primary cell small-2" name="aaa" value="aaa">複製(未実装)</button>
+  <div class="cell small-1"></div>
+  <button type="button" class="btn btn-outline-success cell small-2" name="aaa" value="aaa">編集(未実装)</button>
+  <div class="cell small-1"></div>
+  <button type="button" onclick="delTableRow();" class="btn btn-outline-danger cell small-2" name="aaa" value="aaa">削除</button>
+  <div class="cell small-1"></div>
+  <button type="button" class="btn btn-outline-info cell small-2" name="aaa" value="aaa">登録(未実装)</button>
+</div>
